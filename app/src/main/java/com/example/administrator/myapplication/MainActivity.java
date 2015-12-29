@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements ILoginViewPresent
     }
 
 
-//初始化
+//git上直接修改 不能更新下来？试试看初始化
     private void initUI() {
         mTVUserName = (EditText) findViewById(R.id.editText);
         mEDPwd = (EditText)findViewById(R.id.editText2);
