@@ -20,9 +20,7 @@ public class MainActivity extends AppCompatActivity implements ILoginViewPresent
     private ILoginViewPresenter mLoginViewPresenter ;
     private View viewById;
     private View mEditView;
-    private EditText viewById1;
-    private View byId;
-    private EditText byId1;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements ILoginViewPresent
         });
 
         initUI();
-        float i = (float) 1.0;
+       
     }
 
 
