@@ -42,7 +42,9 @@ public class MainActivity extends AppCompatActivity implements ILoginViewPresent
     }
 
 
-
+    /**
+     * ≥ı ºªØ
+     */
     private void initUI() {
         mTVUserName = (EditText) findViewById(R.id.editText);
         mEDPwd = (EditText)findViewById(R.id.editText2);
