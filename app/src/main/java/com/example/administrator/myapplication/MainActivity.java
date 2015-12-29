@@ -18,11 +18,7 @@ public class MainActivity extends AppCompatActivity implements ILoginViewPresent
     private EditText mTVUserName,mEDPwd;
     private  View mProBar;
     private ILoginViewPresenter mLoginViewPresenter ;
-    private View viewById;
-    private View mEditView;
-    private EditText viewById1;
-    private View byId;
-    private EditText byId1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements ILoginViewPresent
         });
 
         initUI();
-        float i = (float) 1.0;
+
     }
 
 
@@ -53,13 +49,6 @@ public class MainActivity extends AppCompatActivity implements ILoginViewPresent
         findViewById(R.id.button).setOnClickListener(this);
         findViewById(R.id.button2).setOnClickListener(this);
         mProBar = findViewById(R.id.progressBar);
-
-        try {
-            byId1 = (EditText) findViewById(R.id.editText);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
 
     }
 

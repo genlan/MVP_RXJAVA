@@ -45,8 +45,9 @@ public class LoginViewPresenter implements ILoginViewPresenter {
         loginView.showLoading();
 
 
-
-
+        /**
+         * 以下是Observable不同的例子  可以先跳过  start
+         */
         Observable observable = Observable.create(new Observable.OnSubscribe<String>() {
             @Override
             public void call(Subscriber<? super String> subscriber) {
@@ -169,6 +170,7 @@ public class LoginViewPresenter implements ILoginViewPresenter {
                 return null;
             }
         });
+    /****end******************************************************************************************/
 
         rx.Observable.create(new Observable.OnSubscribe<Object>() {
             @Override
