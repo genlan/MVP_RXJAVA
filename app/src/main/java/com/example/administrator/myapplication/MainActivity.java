@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements ILoginViewPresent
    private void initTest(){
         //此方法是git上直接添加的
        Log.e("test","11111");
+       Log.e("test","22222");
     }
 
 
