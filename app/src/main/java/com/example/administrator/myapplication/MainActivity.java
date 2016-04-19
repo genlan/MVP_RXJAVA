@@ -15,12 +15,17 @@ import com.example.bean.UserInfo;
 
 public class MainActivity extends AppCompatActivity implements ILoginViewPresenter.Views, View.OnClickListener {
 
-    private EditText mTVUserName,mEDPwd;
-    private  View mProBar;
-    private ILoginViewPresenter mLoginViewPresenter ;
+    private EditText mTVUserName, mEDPwd;
+    private View mProBar;
+    private ILoginViewPresenter mLoginViewPresenter;
+
     private View viewById;
     private View mEditView;
-    
+
+    private EditText viewById1;
+    private View byId;
+    private EditText byId1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,14 +45,14 @@ public class MainActivity extends AppCompatActivity implements ILoginViewPresent
         });
 
         initUI();
-       
-    }
 
+
+    }
 
 
     private void initUI() {
         mTVUserName = (EditText) findViewById(R.id.editText);
-        mEDPwd = (EditText)findViewById(R.id.editText2);
+        mEDPwd = (EditText) findViewById(R.id.editText2);
         findViewById(R.id.button).setOnClickListener(this);
         findViewById(R.id.button2).setOnClickListener(this);
         mProBar = findViewById(R.id.progressBar);
@@ -60,11 +65,6 @@ public class MainActivity extends AppCompatActivity implements ILoginViewPresent
 
 
     }
-
-
-
-
-
 
 
     @Override
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity implements ILoginViewPresent
 
     @Override
     public void toMainActivity(UserInfo user) {
-        Toast.makeText(this, user.getUsername()+user.getPwd(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, user.getUsername() + user.getPwd(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -142,9 +142,9 @@ public class MainActivity extends AppCompatActivity implements ILoginViewPresent
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.button:
-                mLoginViewPresenter.login(getUserName(),getPwd());
+                mLoginViewPresenter.login(getUserName(), getPwd());
                 break;
             case R.id.button2:
                 mLoginViewPresenter.clear();
