@@ -19,19 +19,14 @@ public class MainActivity extends AppCompatActivity implements ILoginViewPresent
     private EditText mTVUserName,mEDPwd;
     private  View mProBar;
     private ILoginViewPresenter mLoginViewPresenter ;
-<<<<<<< HEAD
+
     private View viewById;
     private View mEditView;
-<<<<<<< Updated upstream
+
     private EditText viewById1;
     private View byId;
     private EditText byId1;
-=======
-    
-=======
 
->>>>>>> remotes/origin/master
->>>>>>> Stashed changes
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,17 +46,9 @@ public class MainActivity extends AppCompatActivity implements ILoginViewPresent
         });
 
         initUI();
-<<<<<<< Updated upstream
-        float i = (float) 1.0;
-=======
-<<<<<<< HEAD
-       
->>>>>>> Stashed changes
-    }
-=======
->>>>>>> remotes/origin/master
 
     }
+
 
 
 //git上直接修改 不能更新下来？试试看行不行  --------------------------初始化
