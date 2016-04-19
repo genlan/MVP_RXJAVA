@@ -5,6 +5,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,11 +19,19 @@ public class MainActivity extends AppCompatActivity implements ILoginViewPresent
     private EditText mTVUserName,mEDPwd;
     private  View mProBar;
     private ILoginViewPresenter mLoginViewPresenter ;
+<<<<<<< HEAD
     private View viewById;
     private View mEditView;
+<<<<<<< Updated upstream
     private EditText viewById1;
     private View byId;
     private EditText byId1;
+=======
+    
+=======
+
+>>>>>>> remotes/origin/master
+>>>>>>> Stashed changes
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +51,20 @@ public class MainActivity extends AppCompatActivity implements ILoginViewPresent
         });
 
         initUI();
+<<<<<<< Updated upstream
         float i = (float) 1.0;
+=======
+<<<<<<< HEAD
+       
+>>>>>>> Stashed changes
+    }
+=======
+>>>>>>> remotes/origin/master
+
     }
 
 
-
+//git上直接修改 不能更新下来？试试看行不行  --------------------------初始化
     private void initUI() {
         mTVUserName = (EditText) findViewById(R.id.editText);
         mEDPwd = (EditText)findViewById(R.id.editText2);
@@ -54,15 +72,20 @@ public class MainActivity extends AppCompatActivity implements ILoginViewPresent
         findViewById(R.id.button2).setOnClickListener(this);
         mProBar = findViewById(R.id.progressBar);
 
-        try {
-            byId1 = (EditText) findViewById(R.id.editText);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-
     }
 
+   private void initTest(){
+        //此方法是git上直接添加的
+       Log.e("test","11111");
+       Log.e("test","22222");
+       Log.e("test","33333");
+    }
+
+
+
+    private void initTestLocal(){
+        //此方法是本地添加的
+    }
 
 
 

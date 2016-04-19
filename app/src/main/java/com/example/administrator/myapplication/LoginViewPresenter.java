@@ -16,9 +16,17 @@ import java.util.Iterator;
 import rx.Observable;
 import rx.Observer;
 import rx.Subscriber;
+<<<<<<< Updated upstream
 import rx.functions.Action0;
 import rx.functions.Action1;
 import rx.functions.Func1;
+=======
+import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Action0;
+import rx.functions.Action1;
+import rx.functions.Func1;
+import rx.schedulers.Schedulers;
+>>>>>>> Stashed changes
 
 
 /**
@@ -43,8 +51,14 @@ public class LoginViewPresenter implements ILoginViewPresenter {
         loginView.showLoading();
 
 
+<<<<<<< Updated upstream
 
 
+=======
+        /**
+         * 以下是Observable不同的例子  可以先跳过  start
+         */
+>>>>>>> Stashed changes
         Observable observable = Observable.create(new Observable.OnSubscribe<String>() {
             @Override
             public void call(Subscriber<? super String> subscriber) {
@@ -167,6 +181,7 @@ public class LoginViewPresenter implements ILoginViewPresenter {
                 return null;
             }
         });
+<<<<<<< Updated upstream
 
 //        rx.Observable.create(new OnSubscribe<Object>() {
 //            @Override
@@ -213,6 +228,55 @@ public class LoginViewPresenter implements ILoginViewPresenter {
 //
 //                    }
 //                });
+=======
+    /****end******************************************************************************************/
+
+        rx.Observable.create(new Observable.OnSubscribe<Object>() {
+            @Override
+            public void call(Subscriber<? super Object> subscriber) {
+
+                if (subscriber.isUnsubscribed()) return;
+
+                try {
+                    //1 发布事件通知订阅者
+                    subscriber.onNext(getWeather());
+                    //2 事件通知完成
+                    subscriber.onCompleted();
+                } catch (Exception e) {
+                    //3 出现异常，通知订阅者
+                    subscriber.onError(e);
+                }
+            }
+        }).subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<Object>() {
+                    @Override
+                    public void onCompleted() {
+                        //对应上面的第2点：subscriber.onCompleted();
+                        //这里写事件发布完成后的处理逻辑
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        //对应上面的第3点：subscriber.onError(e);
+                        //这里写出现异常后的处理逻辑
+                        loginView.showFailedError();
+                        loginView.hideLoading();
+                    }
+
+                    @Override
+                    public void onNext(Object o) {
+                        //对应上面的第1点：subscriber.onNext(weather);
+                        //这里写获取到某一个事件通知后的处理逻辑
+                        if (o != null){
+                            loginView.setUserName(o.toString()) ;
+                            loginView.hideLoading();
+                        }
+
+
+                    }
+                });
+>>>>>>> Stashed changes
 
 
 
